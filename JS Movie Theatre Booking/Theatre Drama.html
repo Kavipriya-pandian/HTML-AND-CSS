@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theatre Drama</title>
+    <style>
+        div#maincontent {
+            height: 100px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="heading">Theatre Drama</div>
+        <div id="maincontent">
+            <h4 style="text-align: right-end; font-weight: bold;">Your Theatre Details</h4>
+            <script>
+                //Write the code to display the movie details
+                var num=prompt("Number of Seat Booked:");
+                //println(num);
+                var cost=9;
+                if(num<=2){
+                    var a=num*9;
+                    document.write("The cost of the ticket is $"+a);
+                    
+
+                }
+                
+                else if(num>2 && num<5){
+                    var cus=prompt("Enter Number of Customer:");
+                    if(cus>2 && cus<5){
+                    var discount1=(cost-(cost*0.05));
+                    document.writeln("Ticket for customer 1 gets 5% discount!, Cost is: $"+discount1);
+                    document.write("<br>");
+                    var discount2=(cost-(cost*0.07));
+                     document.writeln("Ticket for customer 2 gets 7% discount!, Cost is: $"+discount2);
+                     document.write("<br>");
+                     var discount3=(cost-(cost*0.09));
+                     document.writeln("Ticket for customer 3 gets 9% discount!, Cost is: $"+discount3);
+                     document.write("<br>");
+                     var discount4=(cost-(cost*0.11));
+                     document.writeln("Ticket for customer 4 gets 11% discount!, Cost is: $"+discount4);
+                     document.write("<br>");
+                     var total=discount1+discount2+discount3+discount4;
+                     document.writeln("For "+cus+" tickets, you need to pay: $"+total+" instead of $"+num*9);
+                    }
+
+
+
+
+                }
+                else {
+                    document.write('Booking is not Valid');
+                }
+
+
+
+            </script>
+        </div>
+    </center>
+</body>
+</html>
